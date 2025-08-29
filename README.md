@@ -1,7 +1,11 @@
+This repository contains change from the repository "GenSim" that accompanies the paper "GenSim: A General Social Simulation Platform with Large Language Model based Agents" Paper link: [https://arxiv.org/abs/2503.09639](https://arxiv.org/abs/2410.04360)
+
 <div align=center>
-    <h1>GenSim: A General Social Simulation Platform with Large Language Model based Agents</h1>
-    <img src="https://img.shields.io/badge/License-MIT-blue" alt="license">
-    <img src="https://img.shields.io/github/stars/TangJiakai/GenSim" alt="license">
+I (HydnumRepandum) have no link with the team who publish this research.
+</div>
+
+<div align=center>
+    <h2>GenSim: A General Social Simulation Platform with Large Language Model based Agents</h1>
 </div>
 
 With the rapid advancement of large language models (LLMs), recent years have witnessed many promising studies on leveraging LLM-based agents to simulate human social behavior. While prior work has demonstrated significant potential across various domains, much of it has focused on specific scenarios involving a limited number of agents and has lacked the ability to adapt when errors occur during simulation. To overcome these limitations, we propose a novel LLM-agent-based simulation platform called GenSim, which: (1) Abstracts a set of general functions to simplify the simulation of customized social scenarios; (2) Supports one hundred thousand agents to better simulate large-scale populations in real-world contexts; (3) Incorporates error-correction mechanisms to ensure more reliable and long-term simulations. To evaluate our platform, we assess both the efficiency of large-scale agent simulations and the effectiveness of the error-correction mechanisms. To our knowledge, GenSim represents an initial step toward a general, large-scale, and correctable social simulation platform based on LLM agents, promising to further advance the field of social science.
