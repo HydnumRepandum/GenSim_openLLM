@@ -1,22 +1,23 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ]; then
-    echo "usage: $0 <port> <gpu_id>"
+    echo "usage: $0 <port> <gpu_id> [model_path]"
     exit 1
 fi
 
 port=$1
 gpuid=$2
+LLM_FILE=${3:-"google/gemma-3-270m"}
+
 export CUDA_VISIBLE_DEVICES="$gpuid"
 export VLLM_ATTENTION_BACKEND=XFORMERS
 
 echo "Port: $port"
 echo "GPU ID: $CUDA_VISIBLE_DEVICES"
+echo "Model: $LLM_FILE"
 
 current_dir=$(cd `dirname $0`; pwd)
 llm_tuning_dir="$(dirname "$current_dir")/llm_tuning/saves"
-
-LLM_FILE="your_llm_path"
 
 LOG_FILE="${current_dir}/.log"
 PID_FILE="${current_dir}/.pid"

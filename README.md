@@ -72,11 +72,27 @@ p.s.
 ### 2.3 Launching the LLM Models
 #### 2.3.1 [Optional] Running the LLM Models
 ```bash
+bash llm_service/launch_llm.sh <port> <gpu_id> [model_path]
+```
+to launch a single LLM model server. The optional `model_path` argument
+specifies the Hugging Face identifier or local path of the model to
+load.
+
+For example, to run the open source Gemma 3 model with 270M parameters on
+Google Colab:
+
+```bash
+!pip install -r requirements.txt vllm
+!bash llm_service/launch_llm.sh 8083 0 google/gemma-3-270m
+```
+
+To launch several models concurrently, you can still use:
+
+```bash
 bash llm_service/launch_all_llm.sh
 ```
-to launch the LLM model server.
 
-p.s. 
+p.s.
 - You can set multiply LLM models.
 - You can also use other LLM APIs based on vllm inference framework.
 
